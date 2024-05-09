@@ -24,10 +24,31 @@
 2. Each row must be unique
 
    - One Column, _or a combination of columns_, must be able to uniquely identify the row (primary key)
-     -Primary keys often are system generated
+     -Primary keys often (but not necessairly) are system generated
 
 3. Each column name must be unique
 
 4. There must be no repeating groups
    - They must me moved to a new table
    - ![e.g.: ](image-1.png)
+
+## 2nd Normal Form (2NF)
+
+1. All Data must depend on the Primary Key (PK)
+
+   - So, any column that doesn't depend on the primary key must be split on its own table
+
+   - ![Example](image-3.png)
+
+- A primary key that links to another table is a foreign key (FK)
+
+## 3rd Normal Form
+
+- The PK must fully define all Non-Key Column and Non-key columns must not depend on any other Key
+  - ![Example](image-4.png)
+
+-In our example, the Job Name was not defined by the primary key, SO, we had to create a new table for it
+
+## SUmmary
+
+![Application of the 3 NFs to our example table](image-5.png)
