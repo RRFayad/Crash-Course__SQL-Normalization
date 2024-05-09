@@ -9,22 +9,26 @@
   - The first 3 are for core basics
   - The latest 2 are for exceptions
 
-- The magic og data lies in its relationships and types of relationships - Cardinality
+- The magic of data lies in its relationships and types of relationships - Cardinality
 
-- So, we are gonna focus in the core (first three Normal Form)
+- So, we are gonna focus in the core (first three Normal Forms)
 
 ## 1st Normal Form (1NF)
 
-- It's about Atomic Value and Unique Identifiers. The rules for normalization:
+It's about Atomic Value and Unique Identifiers. The rules for normalization:
+
+Our Initial table:
+![Initial Table](image-7.png)
 
 1. A cell must never contain more than one value
 
-   - So, if there's an array or something, we must slipt the data
+![example](image-6.png)
 
 2. Each row must be unique
 
    - One Column, _or a combination of columns_, must be able to uniquely identify the row (primary key)
      -Primary keys often (but not necessairly) are system generated
+     - In our example we generated it via system (but could be 'Name+Address')
 
 3. Each column name must be unique
 
@@ -45,10 +49,11 @@
 ## 3rd Normal Form
 
 - The PK must fully define all Non-Key Column and Non-key columns must not depend on any other Key
+
   - ![Example](image-4.png)
 
--In our example, the Job Name was not defined by the primary key, SO, we had to create a new table for it
+- In our example, the Job Name was not defined by the primary key, SO, we had to create a new table for it
 
-## SUmmary
+## Summary
 
 ![Application of the 3 NFs to our example table](image-5.png)
